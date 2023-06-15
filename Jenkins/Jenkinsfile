@@ -42,7 +42,7 @@ podTemplate(containers: [
             container('docker') {
 		    /kaniko/executor --context="/home/jenkins/agent/workspace/test-job1/spring-petclinic"  \
 		    --dockerfile Dockerfile  \
-		    --destination "${artifactory}/${repo}/${appname}":"rz-${build}" \
+		    --destination "${artifactory}/${repo}/${appname}":"rz-${build}"  \
 		    --force  \
             }
         } //end build
