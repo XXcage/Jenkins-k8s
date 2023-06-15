@@ -46,12 +46,12 @@ podTemplate(containers: [
               sh "echo docker build -t $appimage --no-cache ."
               sh "echo docker login $artifactory -u admin -p password"
               sh "echo docker push $appimage"
-	      /kaniko/executor --context . --dockerfile Dockerfile --destination <registry>/<appimage> --no-push
-	      kaniko build -f Dockerfile -t <appimage> --no-cache .
-	      kaniko --context <context> --dockerfile <dockerfile> --destination <registry>/<appimage> --username <username> --password <password> --insecure
-	      echo "<password>" | /kaniko/executor --context . --dockerfile Dockerfile --destination <registry>/<appimage> --username <username> --password-stdin
-	      kaniko push --destination <registry>/<appimage> --username <username> --password <password> --insecure
-	      /kaniko/executor --context . --dockerfile Dockerfile --destination <registry>/<appimage> --username <username> --password <password>
+	  //    /kaniko/executor --context . --dockerfile Dockerfile --destination <registry>/<appimage> --no-push
+	  //    kaniko build -f Dockerfile -t <appimage> --no-cache .
+	  //    kaniko --context <context> --dockerfile <dockerfile> --destination <registry>/<appimage> --username <username> --password <password> --insecure
+	  //    echo "<password>" | /kaniko/executor --context . --dockerfile Dockerfile --destination <registry>/<appimage> --username <username> --password-stdin
+	  //    kaniko push --destination <registry>/<appimage> --username <username> --password <password> --insecure
+	  //    /kaniko/executor --context . --dockerfile Dockerfile --destination <registry>/<appimage> --username <username> --password <password>
             }
         } //end build
 
