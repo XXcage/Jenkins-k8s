@@ -45,6 +45,7 @@ podTemplate(containers: [
                     --destination \"${artifactory}/${repo}/${appname}:rz-${build}\"  \
                     --force"
             }
+	}
 //         } // end build
 //         stage('build') {
 //             container('docker') {
